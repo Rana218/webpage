@@ -1,0 +1,16 @@
+<script type="text/javascript">
+function displayHtml() {
+HTMLCode = document.getElementById('source').innerHTML;
+document.getElementById('display').textContent = HTMLCode;
+return HTMLCode;
+}
+</script>
+<div onclick="displayHtml();">
+<button onclick="document.execCommand('bold',false,null);">Bold</button>
+<button onclick="document.execCommand('italic',false,null);">Italic</button>
+<div contenteditable id="source" onkeyup="JavaScript:displayHtml();">
+Try making some of this text bold or even italic...
+</div>
+</div>
+<p>And here's the generated code:</p>
+<textarea style="width:130px;height:130px;" id="display">
